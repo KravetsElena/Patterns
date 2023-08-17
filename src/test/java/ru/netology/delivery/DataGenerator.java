@@ -1,5 +1,4 @@
 package ru.netology.delivery;
-
 import com.github.javafaker.Faker;
 import lombok.Value;
 
@@ -36,7 +35,8 @@ public class DataGenerator {
         }
 
         public static UserInfo generateUser(String locale) {
-            return new UserInfo(generateCity(), generateName(locale), generatePhone(locale));
+            UserInfo user = new UserInfo(generateCity(), generateName(locale), generatePhone(locale));
+            return user;
         }
     }
 
